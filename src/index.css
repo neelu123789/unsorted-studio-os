@@ -1,0 +1,44 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+[data-theme="light"]{
+  --bg:#F7F6F3;--surface:#FFFFFF;--surface2:#F0EEE9;--surface3:#E5E2DB;
+  --border:#E2DED7;--border2:#C8C3BC;
+  --text:#1A1814;--text2:#6B6560;--text3:#9B978F;
+  --lime:#5CB83A;--lime-bg:#EFF9E8;--lime-border:#B8E8A0;
+  --orange:#E8670D;--orange-bg:#FEF3E8;--orange-border:#FDC89A;
+  --blue:#2563EB;--blue-bg:#EFF6FF;--blue-border:#BFDBFE;
+  --red:#DC2626;--red-bg:#FEF2F2;--red-border:#FECACA;
+  --purple:#7C3AED;--purple-bg:#F5F3FF;--purple-border:#DDD6FE;
+  --teal:#0D9488;--teal-bg:#F0FDFA;--teal-border:#99F6E4;
+  --shadow:0 1px 3px rgba(0,0,0,0.07);
+  --shadow-md:0 4px 14px rgba(0,0,0,0.09);
+  --shadow-lg:0 8px 28px rgba(0,0,0,0.12);
+  --overlay:rgba(26,24,20,0.5);
+}
+[data-theme="dark"]{
+  --bg:#0F0F0E;--surface:#1A1918;--surface2:#222120;--surface3:#2B2A28;
+  --border:#302E2B;--border2:#403E3A;
+  --text:#F0EDE8;--text2:#A8A49E;--text3:#68645E;
+  --lime:#6DD44A;--lime-bg:rgba(109,212,74,0.1);--lime-border:rgba(109,212,74,0.25);
+  --orange:#F08020;--orange-bg:rgba(240,128,32,0.1);--orange-border:rgba(240,128,32,0.25);
+  --blue:#4D90F0;--blue-bg:rgba(77,144,240,0.1);--blue-border:rgba(77,144,240,0.25);
+  --red:#F05252;--red-bg:rgba(240,82,82,0.1);--red-border:rgba(240,82,82,0.25);
+  --purple:#9D6EF8;--purple-bg:rgba(157,110,248,0.1);--purple-border:rgba(157,110,248,0.25);
+  --teal:#2DD4BF;--teal-bg:rgba(45,212,191,0.1);--teal-border:rgba(45,212,191,0.25);
+  --shadow:0 1px 3px rgba(0,0,0,0.35);
+  --shadow-md:0 4px 14px rgba(0,0,0,0.45);
+  --shadow-lg:0 8px 28px rgba(0,0,0,0.55);
+  --overlay:rgba(0,0,0,0.6);
+}
+:root{
+  --syne:'Syne',sans-serif;--body:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:12px;--r-sm:8px;--r-lg:16px;
+}
+html{font-size:14px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--text);font-family:var(--body);min-height:100vh;transition:background .2s,color .2s}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+input,select,textarea,button{font-family:var(--body)}
+a{text-decoration:none;color:inherit}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes toastIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
