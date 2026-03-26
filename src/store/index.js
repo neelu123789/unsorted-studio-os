@@ -168,6 +168,14 @@ export const useStore = create(
         if(error) throw error
         set(s=>({clients:s.clients.map(c=>c.id===id?mapClient(u):c)}))
       },
+      regeneratePortalToken: async id => {
+        const newToken = 'tok_' + Math.random().toString(36).slice(2) + Date.now().toString(36)
+        const {data:u,error} = await supabase.from('clients').update({portal_token:newToken}).eq('id',id).select().single()
+        if(error) throw error
+        set(s=>({clients:s.clients.map(c=>c.id===id?mapClient(u):c)}))
+        return newToken
+      },
+
       deleteClient: async id => {
         const {error} = await supabase.from('clients').delete().eq('id',id)
         if(error) throw error
